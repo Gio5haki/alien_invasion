@@ -94,6 +94,9 @@ class AlienInvasion:
         self._check_fleet_edges()
         self.aliens.update()
 
+        #Look for alien-ship collision
+        if pygame.splite.spritecollideany(self.ship, self.aliens):
+
     def _create_fleet(self):
         """Create fleet of aliens"""
         # Create an alien and find the number of aliens in a row
